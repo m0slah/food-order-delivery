@@ -1,20 +1,21 @@
-import React from "react";
+import React, { Fragment } from "react";
 
 import classes from "./Header.module.css";
+import CHeaderCartButton from "./HeaderCartButtons";
 
-import mealCover from '../../asset/meal-cover.jpeg'
+import mealCover from "../../asset/meal-cover.jpeg";
 
 const Header = () => {
   return (
-    <div className={classes.header}>
-      <header>
+    <Fragment>
+      <header className={classes.header}>
         <h1>ژەم</h1>
-        <button>Cart</button>
+        <CHeaderCartButton />
       </header>
       <div className={classes["main-img"]}>
-        <img src={mealCover}/>
+        <img src={mealCover} />
       </div>
-    </div>
+    </Fragment>
   );
 };
 
