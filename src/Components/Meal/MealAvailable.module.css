@@ -9,7 +9,6 @@
 .meals-list li {
     list-style: none;
     font-weight: 700;
-    margin: 0;
     padding: 0;
     align-items: start;
 }

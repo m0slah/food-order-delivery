@@ -1,6 +1,7 @@
 import React from "react";
 
-import Card from '../UI/Card';
+import Card from "../UI/Card";
+import MealItem from "./MealItem/MealItem";
 
 import classes from "./MealAvailable.module.css";
 
@@ -8,42 +9,44 @@ const Dummy_List = [
   {
     id: 1,
     name: "Suchi",
-    price: "5",
+    price: "5.25",
   },
   {
     id: 2,
     name: "Pizza",
-    price: "6",
+    price: "6.15",
   },
   {
     id: 3,
     name: "Hamburger",
-    price: "4",
+    price: "5.50",
   },
   {
-    id: 3,
+    id: 4,
     name: "Sandwich",
-    price: "4",
+    price: "4.99",
   },
   {
-    id: 3,
+    id: 5,
     name: "Fish",
-    price: "4",
+    price: "10.50",
   },
   {
-    id: 3,
+    id: 6,
     name: "Rice",
-    price: "4",
+    price: "3.10",
   },
 ];
 
 const MealAvailable = () => {
-  const lists = Dummy_List.map((list) => <li>{list.name}</li>);
+  const meals = Dummy_List.map((meal) => (
+    <MealItem key={meal.id} id={meal.id} name={meal.name} price={meal.price} />
+  ));
 
   return (
     <div className={classes["meals-list"]}>
       <Card>
-        <ul>{lists}</ul>
+        <ul>{meals}</ul>
       </Card>
     </div>
   );
