@@ -1,5 +1,9 @@
+.headerButtons {
+    display: flex;
+}
+
 .button {
-    margin: 10px 0;
+    margin: 10px;
     cursor: pointer;
     font: inherit;
     border: none;
@@ -37,7 +41,7 @@
 .button:hover .badge,
 .button:active .badge {
     background-color: #537FE7;
-} 
+}
 
 .bump {
     animation: bump 300ms ease-out;
@@ -63,4 +67,37 @@
     100% {
         transform: scale(1);
     }
+}
+
+select {
+    margin: 10px;
+    cursor: pointer;
+    font: inherit;
+    border: none;
+    background-color: #537FE7;
+    color: white;
+    padding: 0.75rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 25px;
+    font-weight: bold;
+    outline: none;
+}
+
+select:hover {
+    background-color: #537FE7;
+}
+
+select option {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    padding: 5px;
+    background-color: #fff;
+    color: #000;
+}
+
+select option:checked {
+    background-color: #537FE7;
+    color: #fff;
 }
